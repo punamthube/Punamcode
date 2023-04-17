@@ -1,0 +1,17 @@
+{
+  "source": {
+    "projectKey": "hybris-test",
+    "clientId": "OQdVG3eZFno2Df4OXAd5a5Qr",
+    "clientSecret": "KM9hTKnCDb-CK6DtAoWpthn9EIqr6EJB"
+  },
+  "destination": {
+    "projectKey": "project-new",
+    "clientId": "1hxnBn7OrDEtSiHs8cXGp164",
+    "clientSecret": "AnvooCnqKLjmMiMfnwJw2Qyf5j0TNm1r"
+  },
+  "options": {
+    "resourceType": "customers",
+    "batchSize": 50,
+    "concurrency": 5
+  }
+}
