@@ -26,6 +26,8 @@ public class StateController {
     }
     @PostMapping("/{id}")
     public State getStateById(@PathVariable String id){
+         projectApiRoot.states().withId(id).get().executeBlocking().getBody();
+
         return projectApiRoot.states().withId(id).get().executeBlocking().getBody();
     }
     @GetMapping
