@@ -27,7 +27,6 @@ public class StoreController {
     }
 
     @GetMapping
-
     public  StorePagedQueryResponse getAllStore(){
         return projectApiRoot.stores().get().executeBlocking().getBody();
 

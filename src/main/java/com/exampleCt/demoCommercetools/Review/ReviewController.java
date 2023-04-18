@@ -3,6 +3,7 @@ package com.exampleCt.demoCommercetools.Review;
 import com.commercetools.api.client.ProjectApiRoot;
 import com.commercetools.api.models.review.Review;
 import com.commercetools.api.models.review.ReviewPagedQueryResponse;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -36,6 +37,12 @@ public class ReviewController {
         Long vesion =getReviewById(id).getVersion();
          projectApiRoot.reviews().withId(id).delete().addVersion(vesion).executeBlocking();
          return "Review is Deleted";
+    }
+    @GetMapping("/GetAllsortReview")
+    public  ReviewPagedQueryResponse getAllSortReview(@RequestParam String sort)
+    {
+        return projectApiRoot.reviews().get().addSort(sort).executeBlocking().getBody();
+
     }
 
 
